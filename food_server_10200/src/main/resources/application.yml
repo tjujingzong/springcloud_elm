@@ -1,0 +1,20 @@
+server:
+  port: 10200
+
+logging:
+  level:
+    org.springframework: debug
+    com.neusoft.mapper: debug
+
+spring:
+  application:
+    name: food-server
+  datasource:
+    username: root
+    password: '007666'
+    url: jdbc:mysql://localhost:3306/elm?characterEncoding=utf-8&serverTimezone=UTC
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.neusoft.po
