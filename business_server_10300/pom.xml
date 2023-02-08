@@ -22,7 +22,11 @@
             <scope>runtime</scope>
             <optional>true</optional>
         </dependency>
-
+        <!--加入eureka clinet的依赖 -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        </dependency>
         <!--数据层相关依赖 -->
         <dependency>
             <groupId>org.mybatis.spring.boot</groupId>

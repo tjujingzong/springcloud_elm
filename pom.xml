@@ -49,5 +49,7 @@
         <module>cart_server_10400</module>
         <module>deliveryaddress_server_10500</module>
         <module>orders_server_10600</module>
+        <module>eureka_server_13000</module>
+        <module>eureka_server_13002</module>
     </modules>
 </project>

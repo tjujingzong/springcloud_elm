@@ -14,7 +14,7 @@ import java.util.List;
  * @Description:
  */
 
-@CrossOrigin("*")
+
 @RestController
 @RequestMapping("/DeliveryAddress")
 public class DeliveryAddressController {

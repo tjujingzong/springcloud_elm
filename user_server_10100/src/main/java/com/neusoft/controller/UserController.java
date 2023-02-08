@@ -6,7 +6,6 @@ import org.springframework.web.bind.annotation.*;
 import com.neusoft.po.User;
 import com.neusoft.service.UserService;
 
-@CrossOrigin("*") //跨域处理
 @RestController
 @RequestMapping("/User")
 public class UserController {
