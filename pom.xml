@@ -44,12 +44,20 @@
 
     <modules>
         <module>user_server_10100</module>
+        <module>user_server_10103</module>
         <module>food_server_10200</module>
+        <module>food_server_10201</module>
         <module>business_server_10300</module>
+        <module>business_server_10301</module>
         <module>cart_server_10400</module>
+        <module>cart_server_10401</module>
         <module>deliveryaddress_server_10500</module>
+        <module>deliveryaddress_server_10501</module>
         <module>orders_server_10600</module>
+        <module>orders_server_10601</module>
         <module>eureka_server_13000</module>
         <module>eureka_server_13002</module>
+        <module>gateway_server_14000</module>
+        <module>gateway_server_14001</module>
     </modules>
 </project>
