@@ -2,10 +2,11 @@ package com.neusoft.controller;
 
 import com.neusoft.po.CommonResult;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.*;
 import com.neusoft.po.User;
 import com.neusoft.service.UserService;
-
+@RefreshScope
 @RestController
 @RequestMapping("/User")
 public class UserController {

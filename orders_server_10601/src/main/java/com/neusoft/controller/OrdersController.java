@@ -4,6 +4,7 @@ import com.neusoft.po.CommonResult;
 import com.neusoft.po.Orders;
 import com.neusoft.service.OrdersService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,7 +17,7 @@ import java.util.List;
  * @Date：2022/9/12 13:28
  * @Description:
  */
-
+@RefreshScope
 @RestController
 @RequestMapping("/Orders")
 public class OrdersController {

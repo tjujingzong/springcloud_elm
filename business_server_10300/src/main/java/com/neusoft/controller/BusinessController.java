@@ -4,6 +4,7 @@ import com.neusoft.po.Business;
 import com.neusoft.po.CommonResult;
 import com.neusoft.service.BusinessService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,6 +19,7 @@ import java.util.List;
  * @Description:
  */
 
+@RefreshScope
 @RestController
 @RequestMapping("/Business")
 public class BusinessController {

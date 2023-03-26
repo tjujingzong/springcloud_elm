@@ -59,5 +59,7 @@
         <module>eureka_server_13002</module>
         <module>gateway_server_14000</module>
         <module>gateway_server_14001</module>
+        <module>config_server_15000</module>
+        <module>config_server_15001</module>
     </modules>
 </project>

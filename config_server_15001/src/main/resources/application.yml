@@ -1,0 +1,34 @@
+server:
+  port: 15001
+
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://gitee.com/liu-jingzong/scc-test.git #git????
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
+
+# 使用bus总线刷新配置文件
+management:
+  endpoints:
+    web:
+      exposure:
+        include: bus-refresh #暴露bus-refresh节点，通过此节点刷新配置
+#eureka配置
+eureka:
+  client:
+    service-url:
+      #需要注册给Eureka Server的地址，也就是将自己注册给哪一个Eureka Server
+      defaultZone: http://eurekaServer13000:13000/eureka,http://eurekaServer13002:13002/eureka
+  instance:
+    #使用ip地址向Eureka注册
+    prefer-ip-address: true
+    #上面的配置已经可以使用ip注册了，但显示的还是主机名，所以这里设置显示的注册名
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
