@@ -1,0 +1,29 @@
+server:
+  port: 10800
+
+logging:
+  level:
+    org.springframework: debug
+    com.neusoft.mapper: debug
+
+spring:
+  application:
+    name: credit-server
+  datasource:
+    username: root
+    password: '007666'
+    url: jdbc:mysql://localhost:3306/elm?characterEncoding=utf-8&serverTimezone=UTC
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.neusoft.po
+
+#eureka??
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eurekaServer13000:13000/eureka,http://eurekaServer13002:13002/eureka
+  instance:
+    prefer-ip-address: true #??ip???Eureka??
+    instance-id: ${spring.cloud.client.ip-address}:${server.port} #????????ID

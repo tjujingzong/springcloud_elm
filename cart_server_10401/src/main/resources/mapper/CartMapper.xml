@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.CartMapper">
+<mapper namespace="com.neusoft.mapper.CartMapper">
     <resultMap type="Cart" id="cartResultMap">
         <id column="cartId" property="cartId"/>
         <result column="foodId" property="foodId"/>
@@ -9,9 +9,9 @@
         <result column="userId" property="userId"/>
         <result column="quantity" property="quantity"/>
         <association property="food" javaType="Food"
-                     select="com.FoodMapper.getFoodById" column="foodId"/>
+                     select="com.neusoft.mapper.FoodMapper.getFoodById" column="foodId"/>
         <association property="business" javaType="Business"
-                     select="com.BusinessMapper.getBusinessById"
+                     select="com.neusoft.mapper.BusinessMapper.getBusinessById"
                      column="businessId"/>
     </resultMap>
 

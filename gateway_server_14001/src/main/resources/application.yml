@@ -50,6 +50,11 @@ spring:
           uri: lb://orders-server
           predicates:
             - Path=/Orders/**
+
+        - id: creditServer
+          uri: lb://credit-server
+          predicates:
+            - Path=/Credit/**
 eureka:
   client:
     service-url:
