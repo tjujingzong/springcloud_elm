@@ -55,6 +55,22 @@ spring:
           uri: lb://credit-server
           predicates:
             - Path=/Credit/**
+
+        - id: virtualwalletServer
+          uri: lb://virtualwallet-server
+          predicates:
+            - Path=/VirtualWallet/**
+
+        - id: virtualwallettransactionServer
+          uri: lb://virtualwallettransaction-server
+          predicates:
+            - Path=/VirtualWalletTransaction/**
+
+        - id: bvirtualwalletServer
+          uri: lb://bvirtualwallet-server
+          predicates:
+            - Path=/BVirtualWallet/**
+
 eureka:
   client:
     service-url:

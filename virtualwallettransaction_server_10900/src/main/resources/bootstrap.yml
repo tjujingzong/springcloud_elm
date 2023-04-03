@@ -1,0 +1,25 @@
+spring:
+  cloud:
+    config:
+      #应用名称。对应git中文件名称的前半部分
+      name: virtualwallettransaction_server_10900
+      #开发环境。对应git中文件名称的后半部分
+      profile: dev
+      #git分支
+      label: master
+      #      #config server的请求地址
+      #      uri: http://localhost:15000
+      discovery:
+        enabled: true
+        service-id: CONFIG-SERVER
+
+eureka:
+  client:
+    service-url:
+      #需要注册给Eureka Server的地址，也就是将自己注册给哪一个Eureka Server
+      defaultZone: http://eurekaServer13000:13000/eureka,http://eurekaServer13002:13002/eureka
+  instance:
+    #使用ip地址向Eureka注册
+    prefer-ip-address: true
+    #上面的配置已经可以使用ip注册了，但显示的还是主机名，所以这里设置显示的注册名
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
